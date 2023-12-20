@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수-2</title>
+</head>
+<body>
+    <!-- MBTI가 뭐에요? -->
+    <!-- 혈액형 뭐에요? -->
+    <button type="button" onclick="userAge()">당신의 나이는?</button>
+    <button type="button" onclick="user_mbti()">MBTI가 뭐에요?</button>
+    <button type="button" onclick="userBloodType()">혈액형은 뭐에요?</button>
+    <script>
+        var mbti = "isfp";
+        function user_mbti(){
+            console.log(mbti);
+        }
+        var bloodType = "a형";
+        function userBloodType(){
+            console.log(bloodType);
+        }
+        // 나이
+        var age = 20; // 숫자데이터는 따음표 X
+        function userAge(){
+            console.log(age)
+        }
+        /* var box1;
+        var box2;
+        var box3;
+        box1 = 10;
+        box1 = 20;
+        box2 = box1;
+        box3 = box2;
+        console.log(box3); */
+    </script>
+</body>
+</html>
