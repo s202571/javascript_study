@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let, const -2</title>
+</head>
+<body>
+    <button type="button" onclick="order()">밥주세요!</button>
+    <button type="button" onclick="cart()">구입하기</button>
+    <script>
+        //버튼을 클릭하면 다음과 같이 출력
+        //구입한 붕어빵의 수량은 2개이고 가격은 총 2000원입니다!
+        //데이터를 변수화 시킬 때는 변수의 데이터 값은 초기값 기준으로 해야한다!
+
+
+        //버튼을 클릭하면 다음과 같이 출력
+        //오늘의 밥은 콩밥이고 반찬은 스팸입니다!
+
+
+        let main = "콩밥";
+        let side = "스팸";
+        function order(){
+            console.log('오늘의 밥은 '+main+'이고 반찬은 '+side+'입니다');
+        }
+        
+        let product = '붕어빵';
+        let num = 1;
+        let price = 1000;
+        function cart(){
+            num += 1;
+            console.log('구입한 '+product+'의 수량은 '+num+'개이고 가격은 총 '+(price*num)+'원입니다!')
+        }
+    </script>
+</body>
+</html>
