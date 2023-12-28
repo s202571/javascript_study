@@ -28,7 +28,7 @@ function func1(){
     console.log(typeof numberInput.value)
     console.log(Number(number.value)+1)
 
-    let result = Number(numberInput.value)
+    let result = Number(numberInput.value)//자동으로 숫자 만들기
     console.log(typeof result)
     console.log(result+1)
 }// value HTML에 없어도 자동으로 인식
