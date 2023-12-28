@@ -8,3 +8,21 @@ console.log(listCls)
 const ulTag = document.getElementsByTagName('ul')[0];
 const listClsLi = ulTag.getElementsByClassName('list')
 console.log(listClsLi)
+//----------------------------------------------
+// Q. gnb 1개잡기
+const gnbCls = document.getElementsByClassName('gnb')[0];
+console.log(gnbCls);
+// Q. gnb-li 2개잡기
+const li_menu1 = gnbCls.getElementsByTagName('li')[0];
+console.log(li_menu1);
+const li_menu2 = gnbCls.getElementsByTagName('li')[3];
+console.log(li_menu2);
+// Q. gnb-li-lnb 2개잡기
+const lnbCls = gnbCls.getElementsByClassName('lnb');
+console.log(lnbCls);
+// Q. gnb-li-lnb 첫번째 lnb만잡기
+const lnbCls1 = gnbCls.getElementsByClassName('lnb')[0];
+console.log(lnbCls1)
+// Q. gnb-li-lnb 두번째 lnb만잡기
+const lnbCls2 = gnbCls.getElementsByClassName('lnb')[1];
+console.log(lnbCls2)

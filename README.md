@@ -152,3 +152,44 @@ console.log(liTag[2]);
 오류로 안 떠서 찾기 힘듬
 ## DOM Node 변수 지정 시
 * HTMLCollection 결과는 변수가 정상인지 오류인지 간단한 확인 시에만 사용하고 `실제로 DOM Node 변수를 이용한 동적인 결과를 만들어야 할 떄는 직접적인 접근으로 대상을 하나씩 개별인식하게 만들어야 한다.[index]`
+## getElementsByClassName
+* 지정된 클래스 이름을 가진 모든 HTML 요소를 찾아 HTML 노드로 반환합니다
+* (document 부분에)부모가 있으면 부모를 적어줌(Tag도 포함되는 내용)
+* 단 document가 한번에 되는 내용이면 document를 사용함
+## getElementByID
+* 지정된 아이디 이름을 가진 모든 HTML 요소를 찾아 HTML 노드로 반환합니다
+* Tag, Class와 다르게 Elements에 s가 안붙고 Name이 없음
+* 아이디는 하나라서 굳이 부모 안적어도 됨 -> 부모적으면 오히려 오류가 남 
+## querySelector
+* 지정된 아이디, 클래스, 태그 이름을 가진 첫 번째 HTML 요소를 찾아 HTML 노드로 반환합니다
+## querySelectorAll
+* 여러개의 Node List를 반환할 수 있고 첫번째 Node List를 반환할 수 도 있습니다
+##
+객체.속성.메서드()
+객체.메서드()
+메서드(객체.속성)
+메서드(객체.메서드)
+메서드(객체.속성.메서드)
+
+안되는것
+객체.매서드().매서드()
+객체.매서드().속성
+## 형변환
+1. 명시적 형변환(개발자가 직접 데이터타입을 결정)
+2. 암시적 형변환(자바스크립트가 개발자 동의없이 자동으로 형변환)
+* prompt 받는 데이터 값은 무조건 문자열로 처리된다
+* NaN == Not a Number 숫자가 아니다
+* 문자를 숫자로 바꾸는 방법
+1. 입력에 바꾸기
+* ex) let num = Number(window.prompt('구입수량은?',''))
+2. 출력에 바꾸기
+* ex) console.log(`구입수량에 +1 이벤트행사중 총 수량은${Number(num)+1}입니다`) */
+## value
+* form 태그에 삽입되는 값 속성(input, option, seiect, button, textarea)
+* form 태그 내에 작성 했었을 땐 미리 입력된 값 표현 가능
+* javascript의 DOM속성 `ex)DOM.value` 로 처리 했을 땐 해당 DOM의 미리 입력된 값부터 사용자가 입력되는 신규 값까지 모두 인식 할 수 있다.
+1. 쇼핑몰의 상품 수량
+2. 쇼핑몰의 총 주문 가격
+3. 예약페이지의 여행 인원 수 등등...
+* 주의사항 -> value속성은 form전용이므로 다른 태그일 때 해당 값을 알고 싶다면 다른 속성 및 매서드를 사용해야한다.
+* 주의사항 -> `DOM.value`로 값 처리 시 숫자를 쓰더라도 문자열(string)으로 인식하기 때문에 필요한 경우 `Number()` 메서드를 활용해 (Number) 데이터탑입으로 변환 해야한다. ex `Number(객체.value())`
