@@ -123,3 +123,32 @@ ex) 클래스, 아이디, 색상 등
 }
 * `delete = 객체 속성 제거`
 * `객체속성명 =  객체 속성 추가(변경동일)`
+# BOM
+* window = bom
+1. `window.alert()` `경고 대화 상자`
+2. `window.prompt()` `문자열 입력 받는 대화 상자`
+3. `window.confirm()` `확인 취소, 버튼이 있는 대화 상자`
+4. `window.print();` `프린트 하는 창이 나옴`
+5. `window.location` `문서의 URL를 관리하는 Location 객체속성`
+6. `window.document` `현재 창의 문서(document)읽기, 쓰기, 수정`
+* window.document.write("테스트 문구")
+7. `window.open(url, target, features)` `새로운 창`
+* window.open('https://google.com','_blank');
+# DOM
+## getElemntsByTagName
+* 지정된 태그 이름을 가진 모든 HTML 요소를 찾아 HTMl 노드로 반환합니다.
+* HTML에 TagNode가 2개 이상 일 때 그중 `1개만` 동적인 기능이 적용되어 DOM으로 등록이 필요한 거라면 `변수 지정 시 [index] 설정하고 대입하기`
+* ex)
+const ulTag = document.getElementsByTagName('ul')[0];
+console.log(ulTag);
+---------------------------------
+* HTML에 TagNode가 2개 이상 일 때 그 중 `여러개`에 동적인 기능이 적용되어 DOM이 된다면 `변수 지정시에는 [index] 없이 대입`하고 `해당 DOM 변수 호출 시 필요한 경우[index] 사용하기`
+* ex)
+const liTag = ulTag.getElementsByTagName('li')
+console.log(liTag[0]);
+console.log(liTag[1]);
+console.log(liTag[2]);
+* ☆★ 대입이랑 호출이랑 같이 사용 하면 절대 안됨
+오류로 안 떠서 찾기 힘듬
+## DOM Node 변수 지정 시
+* HTMLCollection 결과는 변수가 정상인지 오류인지 간단한 확인 시에만 사용하고 `실제로 DOM Node 변수를 이용한 동적인 결과를 만들어야 할 떄는 직접적인 접근으로 대상을 하나씩 개별인식하게 만들어야 한다.[index]`
