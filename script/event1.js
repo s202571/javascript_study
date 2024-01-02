@@ -48,3 +48,23 @@ answer_btn.addEventListener('click', function(){
     console.log(total)//  결과 변수 정상 확인
     window.alert(`총 수입은 ${total}원 입니다`)
 })
+// 자바스크립트 은행
+// 입금전 잔액 : 10000원(버튼 클릭전 미리 보이는 값)
+// 입금액(자유) 입금 시 마다 +100원이 더해져서 총잔액에 포함
+// 입금시 잔액 포함은 버튼 클릭 시 실행되는 구조
+const bank_input = document.querySelector('#bank_input')//입금input
+const bank_total = document.querySelector('#bank_total')//총잔액input
+const bank_btn = document.querySelector('#bank_btn')//입금버튼
+let total = 10000; //number
+console.log(bank_input, bank_total, bank_btn)
+bank_total.value = total
+bank_btn.addEventListener('click', function(){
+    console.log('.') //버튼 동작 확인
+    console.log(Number(bank_input.value) + 100) // 더하기 결과 확인
+    console.log(total+Number(bank_input.value)+100)//총잔액 더하기 결과 확인
+    let input_total = Number(bank_input.value) + 100 //입금액+이자
+    total += input_total;// total + total + input_total
+    bank_total.value = total
+    //입금액 입력값 초기화
+    bank_input.value = ""
+})
