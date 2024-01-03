@@ -206,3 +206,28 @@ console.log(liTag[2]);
 * 객체.객체.속성 = '속성:값; 속성:값; 속성:값;
 * aNode[1].parentNode.style.backgroundColor = 'aqua'; //한가지 하나만
 * 객체.겍체.속성.속성 = '값';
+## DOM  관계속성
+1. parentNode 부모 노드, parentElement 부모요소
+   - parentNode.parentNode 연속 사용 (부모의 부모 잡기)
+   - 자식 또는 자식노드.parentElement (특정 자시의 부모 잡기)
+2. javascript에서 css 제어하기 -> style 속성
+    - DOM.관계.style = "속성:값; 속성:값; 속성:값;";
+        * (위) style 2번 이상 생성 시 이전 속성:값 제거됨
+    - DOM.관계.관계.style.속성 = "값";
+        * (위) style 2번 이상 생성 시 기존 속성값에 이어서 추가됨
+    - DOM.style.속성="값"
+    - 위 관계는 필요에 따라 선택속성
+## 첫번째 자식, 마지막 자식 노드 잡기
+1. 첫번째 자식
+* `firstChild - 첫번째 자식 노드 (공백포함)`
+* `firstElementChild - 첫번째 자식 노드 (요소만 체크)`
+2. 마지막 자식
+* `lastChild - 마지막 자식 노드 (공백포함)`
+* `lastElementChild - 마지막 자식 노드 (요소만 체크)`
+## 이전 형제, 다음 형제 노드 잡기
+1. 이전 형제
+* `previousSibling - 이전 형제 노드 (공백포함)`
+* `previousElementSibling - 이전 형제 노드 (요소만 체크)`
+2. 다음 형제 
+* `nextSibling - 다음 형제 노드 (공백포함)`
+* `nextElementSibling - 다음 형제 노드 (요소만 체크)`
