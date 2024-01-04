@@ -231,3 +231,20 @@ console.log(liTag[2]);
 2. 다음 형제 
 * `nextSibling - 다음 형제 노드 (공백포함)`
 * `nextElementSibling - 다음 형제 노드 (요소만 체크)`
+# 객체.innerHTML 
+* `객체.innerHTML;` `특정 객체의 자식 , 자손 HTML 읽기`
+* `객체.innerHTML = 값;` `HTML 삽입 및 변경`
+# innerText
+* `객체.innerText;` `객체의 자식 , 자손 텍스트 노드 읽기(HTML X)`
+* `객체.innerText = 값;` `텍스트 노드 삽입 및 변경 (HTML X)`
+# appendChild(삽입노드) 마지막 자식 노드 추가
+* `객체.appendChild()`
+* `객체.객체.appendChild()`
+* `객체.속성.appendChild()`
+* `객체.속성.속성.appendChild()`
+* 객체의 마지막 자식 노드 위치에 `()` 괄호 안 값 추가
+# insertBefore(삽입노드, 기존 시작자식 노드) 첫번째 자식 노드 추가
+* 부모.insertBefore(삽입, 부모.firstChild)
+# createElement(삽입Tag)
+* `document.createElement()`
+* 요소 노드 자바스크립트 내에서 동적인 용도로 생성할 경우
