@@ -273,3 +273,40 @@ console.log(liTag[2]);
 1. `AND(&&)` = `양쪽 피연산자가 모두 참일 때 결과는 참`
 2. `OR(||)` = `양쪽 피연산자 중 하나라도 참이면 결과는 참`
 3. `NOT(!)` = `피연산자의 논리 값을 반전함. 참이면 거짓 반환`
+# js class
+* class 이름은 css 속성들의 특징으로 지어준다
+* `우선 순위`
+1. 인라인 4 
+2. 아이디 3 
+3. 클래스 2 
+4. 태그 1
+.list li = 클래스 + 태그 = 3
+.list .desing_set = 클래스 + 클래스 = 4
+.list .desing_set 더 우선 순위이다
+## important = 우선 순위 강제로 높이기
+* 하지만 코드가 꼬일 수 있어 정말 중요할 때만 사용
+## classList, className
+* CSS 클래스를 자바스크립트와 연동하여 다양한 동작 표현을 진행할 수 있습니다.
+## DOM.className = '추가클래스명'
+* `대입하면 전에 것은 삭제 되니 복합 대입으로 작성하고 복합연산자로 연결하는 추가 클래스를 공백 없이 입력 시 기존 클래스의 이름이 변경되는 것으로 인식합니다.`
+* ex) 공백X = desing_set1desing_set2
+* ex) 공백O = desing_set1 desing_set2
+* li[1].className = 'desing_set1'
+* li[1].className += ' desing_set2'
+## DOM.classList.add('추가클래스명')
+* className과 다르게 공백 또는 복합연산자 없이 클래스등록이 가능합니다.
+* 동시에 2개 이상의 클래스를 콤마(,)로 구분하여 선언할 수 있습니다.
+* ex) li[1].classList.add('desing_set1', 'desing_set2')
+## DOM.classList.remove('제거클래스명')
+* 원하는 DOM 대상에 적용된 클래스를 제거할 수 있습니다.
+* 제거하고 싶은 경우는 add방식과 동일하게 콤마(,)로 구분하여 작성
+* ex) li[1].classList.remove('desing_set1', 'desing_set2')
+## DOM.classList.toggle('토글클래스명')
+* 버튼처럼 껐다 켰다 가능
+* ex) btn.addEventListener('click', ()=>{li[2].classList.toggle('desing_set1')})
+## DOM.classList.replace('기존', '변경')
+* target.classList.replace('a', 'b') `a를 b로 변경`
+* a없으면 안변함
+## DOM.classList.contains(클래스 유무 확인)
+* 클래스의 존재 유무를 확인합니다.(jquery의 hasClass와 의미 동일)
+* true or false를 반환합니다.
