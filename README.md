@@ -310,3 +310,7 @@ console.log(liTag[2]);
 ## DOM.classList.contains(클래스 유무 확인)
 * 클래스의 존재 유무를 확인합니다.(jquery의 hasClass와 의미 동일)
 * true or false를 반환합니다.
+### setInterval 일정시간 반복 타이머
+### 복제대상.cloneNode()
+복제대상.cloneNode() // 자식, 자손 없이 대상만 복제
+복제대상.cloneNode(true) // 자식, 자손 포함해서 대상을 복제
