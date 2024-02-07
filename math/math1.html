@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math-1</title>
+</head>
+<body>
+    <input type="text" name="txt" id="txt">
+    <input type="text" name="num" id="num" value="1">
+    <button type="button" id="btn">click</button>
+    <p class="result"></p>
+    <script src="./data.js"></script>
+    <script>
+
+        const txt = document.querySelector('#txt')
+        const num = document.querySelector('#num')
+        const btn = document.querySelector('#btn')
+        const result = document.querySelector('.result')
+        let min_result
+        console.log(txt,num,btn)
+
+        btn.addEventListener('click', ()=>{
+            min_result = Math.max(data[0].price, data[1].price, data[2].price)
+            for(let i of data){
+                if(i.price == min_result){
+                    result.innerHTML = i.name + i.price + '원'
+                }
+            }
+            /* result.innerHTML = Math.min(data[0].price, data[1].price, data[2].price) */
+            /* txt.value = Math.min(1,10,-100)
+            num.value = Math.min(5,7,6) 가장 작은 수*/
+            /* txt.value = Math.abs(-1.5)
+            num.value = Math.abs(-10) 음수를 양수로 */
+            /* txt.value = Math.round(123.456)
+            num.value = Math.round(1.6) 정수로 반올림(.5기준으로) */
+            /* txt.value = Math.ceil(153.456)
+            num.value = Math.ceil(1.4) 정수로 반올림(무조건) */
+            /* txt.value = Math.floor(Math.random()*5)
+            num.value = Math.floor(Math.random()*10) 정수값으로 반환 */
+            /* txt.value = Math.random()
+            num.value = Math.random() 0~1 소수값 랜덤 */
+            /* txt.value = Math.PI
+            num.value = Math.PI 파이 원주율 */
+        })
+    </script>
+</body>
+</html>
